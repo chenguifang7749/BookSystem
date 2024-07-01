@@ -53,7 +53,7 @@ public class Book {
     @Override
     public String toString() {
         return
-                "书名：'" + name + '\'' +
+                "图书的名字：'" + name + '\'' +
                 ", 作者：'" + author + '\'' +
                 ", 价格：" + price +
                 ", 风格类型：'" + type + '\'' +
