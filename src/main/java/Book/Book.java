@@ -7,6 +7,13 @@ public class Book {
     private String type;//类型
     private boolean isBorrowed;//是否被借出,初始值是false,在构造方法中不用写
 
+    public Book(String name, String author, int price, String type) {//构造方法
+        this.name = name;
+        this.author = author;
+        this.price = price;
+        this.type = type;
+    }
+
     public String getName() {
         return name;
     }
@@ -43,20 +50,18 @@ public class Book {
         return isBorrowed;
     }
 
-    public Book(String name, String author, int price, String type) {//构造方法
-        this.name = name;
-        this.author = author;
-        this.price = price;
-        this.type = type;
-    }
     @Override
     public String toString() {
-        return "Book{" +
-                "name='" + name + '\'' +
-                ", author='" + author + '\'' +
-                ", price=" + price +
-                ", type='" + type + '\'' +
-                ", isBorrowed=" + isBorrowed +
-                '}';
+        return
+                "书名：'" + name + '\'' +
+                ", 作者：'" + author + '\'' +
+                ", 价格：" + price +
+                ", 风格类型：'" + type + '\'' +
+                ", 是否已借出=" +(isBorrowed==true?"   已借出":"  未借出")
+                ;
+    }
+
+    public void setBorrowed(boolean borrowed) {
+        isBorrowed = borrowed;
     }
 }
